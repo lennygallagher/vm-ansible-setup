@@ -1,0 +1,15 @@
+---
+- name: download Payara
+  get_url:
+    url: http://bit.ly/1Gm0GIw
+    dest: "{{ dest_folder }}"
+
+- name: unzip Payara
+  unarchive:
+    src: "{{ dest_folder }}/payara-4.1.1.154.zip"
+    dest: "{{ dest_folder }}"
+
+- name: remove zip
+  file:
+    path: "{{ dest_folder }}/payara-4.1.1.154.zip"
+    state: absent
