@@ -1,2 +1,2 @@
 execute playbook:
-ansible-playbook basicSetUp.yml
+ansible-playbook playbooks/basicSetUp.yml
